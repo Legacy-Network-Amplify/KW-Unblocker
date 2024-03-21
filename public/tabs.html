@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab System with UltraViolet Proxy</title>
+    <link rel="stylesheet" href="/assets/css/tabs.css" />
+    <script src="/assets/js/eruda/eruda.js"></script>
+    <script>
+      eruda.init();
+    </script>
+  </head>
+  <body>
+    <div>
+      <div id="tabs-container">
+        <div id="tabs" class="tabs"></div>
+        <button id="add-tab" onclick="createTab();">+</button>
+      </div>
+      <div style="display: flex">
+        <button id="back-button" onclick="backward()">Back</button>
+        <button id="forward-button" onclick="forward()">Forward</button>
+        <button id="refresh-button" onclick="refresh()">Refresh</button>
+        <form id="uv-form">
+          <input
+            id="uv-search-engine"
+            value="https://www.google.com/search?q=%s"
+            type="hidden"
+          />
+          <input
+            class="searchbar"
+            id="uv-address"
+            type="text"
+            placeholder="Search Google or type an URL"
+            class="form__input"
+          />
+        </form>
+      </div>
+    </div>
+    <div id="tab-content" class="tab-content"></div>
+
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script src="/assets/js/tabs.js"></script>
+  </body>
+</html>
