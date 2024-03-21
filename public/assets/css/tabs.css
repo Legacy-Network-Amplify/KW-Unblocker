@@ -35,7 +35,7 @@ body, html {
   
   .tab-content {
     border: 1px solid #323232;
-    height: 500px; /* Match iframe height */
+    height: 100%; /* Match iframe height */
   }
   
   .tab-pane {
@@ -47,6 +47,7 @@ body, html {
   .tab-pane.active {
     display: block;
   }
+  
   
   button#add-tab {
     margin-left: auto;
